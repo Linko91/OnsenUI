@@ -115,7 +115,7 @@ limitations under the License.
 }
 
 .zoom-hide.zoom-hide-active {
-  opacity: 0;
+  opacity: 0.5;
   -webkit-transform: scale(0.2);
 }
 
