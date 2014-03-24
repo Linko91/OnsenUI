@@ -506,11 +506,13 @@ limitations under the License.
 						var $navigatorToolbar = angular.element(navigatorToolbar);
 						var title = $navigatorToolbar.attr('title');
 						var leftButtonIcon = $navigatorToolbar.attr('left-button-icon');
+						var leftButtonLabel = $navigatorToolbar.attr('left-button-label');
 						var rightButtonIcon = $navigatorToolbar.attr('right-button-icon');
 						var onLeftButtonClick = $navigatorToolbar.attr('on-left-button-click');
 						var onRightButtonClick = $navigatorToolbar.attr('on-right-button-click');
 						options.title = options.title || title;
 						options.leftButtonIcon = options.leftButtonIcon || leftButtonIcon;
+						options.leftButtonLabel = options.leftButtonLabel || leftButtonLabel;
 						options.rightButtonIcon = options.rightButtonIcon || rightButtonIcon;
 						options.onLeftButtonClick = options.onLeftButtonClick || onLeftButtonClick;
 						options.onRightButtonClick = options.onRightButtonClick || onRightButtonClick;
@@ -648,9 +650,10 @@ limitations under the License.
 								var options = {
 									title: scope.title,
 									leftButtonIcon: scope.initialLeftButtonIcon,
+									leftButtonLabel: scope.leftButtonLabel,
 									rightButtonIcon: scope.rightButtonIcon,
 									onLeftButtonClick: scope.onLeftButtonClick,
-									onRightButtonClick: scope.onRightButtonClick
+									onRightButtonClick: scope.onRightButtonClick									
 								};
 								var compiledPage = navigator.generatePageEl(angular.element(compiledPageContent), options);
 								navigator._pushPageDOM('', compiledPageContent[0], compiledPage, pageScope, options);
